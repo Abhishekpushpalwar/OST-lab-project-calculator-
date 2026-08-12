@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int main() {
@@ -6,21 +7,27 @@ int main() {
     int a, b;
 
     cout << "Enter + for addition or - for subtraction: "<<endl;
-    cout << "Enter * for multiplication or / for division: ";
+    cout << "Enter * for multiplication or / for division: "<<endl;
+    cout<< "Enter ^ for exponent or % for modulus: "<<endl;
+   
     cin >> op;
 
     cout << "Enter two numbers: ";
     cin >> a >> b;
 
     if (op == '+')
-        cout << "Result = " << a + b;
+        cout << "Result = " << a + b<<endl;
     else if (op == '-')
-        cout << "Result = " << a - b;
+        cout << "Result = " << a - b<<endl;
     else if (op == '*')
-        cout << "Result = " << a * b;
+        cout << "Result = " << a * b<<endl  ;
     else if (op == '/')
-        cout << "Result = " << a / b;
-    else
+        cout << "Result = " << a / b<<endl;
+    else if (op == '^')
+        cout << "Result = " << pow(a, b)<<endl;
+    else if (op == '%')
+        cout << "Result = " << a % b<<endl;
+     else
         cout << "Invalid operator";
 
     return 0;
